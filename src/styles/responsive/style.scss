@@ -1,0 +1,124 @@
+// tablet view
+@media screen and (max-width: 1100px) {
+  #app {
+    #lines {
+      height: 80%;
+      width: 100%;
+    }
+    .container {
+      nav {
+        .directions {
+          display: none;
+        }
+      }
+      footer {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        gap: 5rem;
+        > * {
+          align-self: flex-start;
+        }
+        span {
+          width: 70%;
+        }
+        .frontend {
+          .f-text {
+            & .frontend_engineer {
+              font-size: 6rem;
+            }
+          }
+        }
+      }
+    }
+
+    #projects {
+      margin-top: 5rem;
+
+      h3 {
+        margin-bottom: 5rem;
+      }
+      .cards {
+        display: flex;
+        flex-direction: column;
+        .card :nth-child(even) {
+          float: none;
+        }
+      }
+      .contents {
+        img {
+          display: none;
+        }
+      }
+    }
+
+    #contact {
+      margin-top: 15%;
+      footer {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+        margin-bottom: 5%;
+      }
+    }
+  }
+}
+
+//mobile view
+@media screen and (max-width: 700px) {
+  #app {
+    .container {
+      main {
+        h1 {
+          font-size: 4rem;
+        }
+      }
+      footer {
+        span {
+          width: 85%;
+        }
+        .frontend {
+          .f-text {
+            & .screw {
+              right: 1rem;
+            }
+            & .frontend_engineer {
+              font-size: 5rem;
+            }
+          }
+        }
+      }
+    }
+    #projects {
+      h1 {
+        font-size: 1.4rem;
+      }
+      h3 {
+        font-size: 4rem;
+        margin-top: 1rem;
+      }
+      section {
+        .card {
+          img {
+            width: 90%;
+          }
+        }
+      }
+      .contents {
+        h4,
+        h2 {
+          font-size: 2rem;
+        }
+        h5 {
+          font-size: 1rem;
+          width: 100%;
+        }
+      }
+    }
+    #contact {
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

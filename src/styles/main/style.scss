@@ -1,0 +1,288 @@
+:where(*, *::before, *::after) {
+  border-width: 0;
+  border-style: solid;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin: 0;
+  padding: 0;
+  background: #eeead8;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+}
+@font-face {
+  font-family: "Euclid";
+  src: url("/fonts/euclid/Euclid-Circular-A-Regular.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Euclid-semiBold";
+  src: url("/fonts/euclid/Euclid-Circular-A-SemiBold.ttf");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Euclid-Italic";
+  src: url("/fonts/euclid/Euclid-Circular-A-Light-Italic.ttf");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Domaine";
+  src: url("/fonts/domain-text/Domaine-Text-Regular.otf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "DEMO";
+  src: url("/fonts/demo/BwGradualDEMO-Medium.otf");
+  font-weight: 400;
+  font-style: normal;
+}
+
+#app {
+  padding: 0% 2%;
+  margin: 1% 0%;
+  z-index: 1;
+  #lines {
+    position: fixed;
+    left: 0%;
+    width: 100%;
+    z-index: 0;
+    background: fixed;
+    opacity: 0.5;
+  }
+  .container {
+    // height: 100svh;
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      text-transform: uppercase;
+      margin-top: 2rem;
+      .clock {
+        font-family: "Euclid";
+      }
+      .name {
+        font-family: "Euclid";
+        margin: auto;
+        & span {
+          font-family: "Domaine";
+          font-style: italic;
+        }
+      }
+      .directions {
+        font-family: "Euclid";
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        border-radius: 50px;
+        padding: 1% 5%;
+        transform: rotate(-5deg);
+        position: fixed;
+        right: 0;
+        z-index: 100;
+        margin-right: 2%;
+        ul {
+          display: flex;
+          gap: 2rem;
+          li {
+            list-style: none;
+            cursor: pointer;
+            a {
+              text-decoration: none;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+    main {
+      margin-top: 5%;
+      padding: 0;
+      width: fit-content;
+      h1 {
+        font-size: 5rem;
+        font-family: "DEMO";
+        font-weight: 100;
+        div {
+          margin-top: -4%;
+        }
+        & span {
+          font-family: "Domaine";
+          font-style: italic;
+        }
+      }
+    }
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 5%;
+      background: none;
+      & > * {
+        background: none;
+      }
+      span {
+        font-family: "Euclid";
+        font-size: 20px;
+        line-height: 25.36px;
+        flex-basis: 40%;
+      }
+      .frontend {
+        position: relative;
+        background: none;
+        img {
+          // display: block;
+          height: auto;
+          width: 100%;
+        }
+        .f-text {
+          background: none;
+          .screw {
+            width: 3.5rem;
+            right: 3rem;
+            top: 5rem;
+            position: absolute;
+            background: none;
+          }
+          .frontend_engineer {
+            transform: translate(0%, -40%);
+            color: black;
+            background: none;
+            text-align: center;
+            font-size: 6rem;
+            font-family: "DEMO";
+            font-weight: 100;
+            width: 100%;
+            line-height: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  #projects {
+    margin-top: 10rem;
+    h1 {
+      font-family: "Euclid";
+      font-weight: normal;
+      max-width: 33rem;
+    }
+    h3 {
+      width: fit-content;
+      margin-left: auto;
+      font-family: "DEMO";
+      font-weight: 100;
+      font-size: 6.2rem;
+      span {
+        font-family: "Domaine";
+        font-style: italic;
+      }
+    }
+    section {
+      position: relative;
+      .card {
+        img {
+          position: relative;
+          z-index: 10;
+          background: none;
+        }
+        .hover {
+          position: absolute;
+          top: 10%;
+          right: 25%;
+          z-index: 12;
+          .upper {
+            border: 2px solid rgba(0, 0, 0, 0.3);
+          }
+          button {
+            border: 2px solid rgba(0, 0, 0, 0.3);
+          }
+        }
+      }
+      // still needs to adjust this!!
+      // .card :nth-child(even) {
+      //   float: right;
+      // }
+    }
+    .contents {
+      margin-top: 5%;
+      position: relative;
+      background: none;
+      & > * {
+        background: none;
+      }
+      h4 {
+        font-family: "Domaine";
+        font-style: italic;
+        font-weight: normal;
+        font-size: 3.75rem;
+        max-width: 55rem;
+        margin-left: auto;
+      }
+      h2 {
+        font-family: "Euclid";
+        font-size: 3.75rem;
+        font-weight: normal;
+        max-width: 60rem;
+        margin-top: 5rem;
+      }
+      h5 {
+        font-family: "Euclid";
+        display: flex;
+        margin: auto;
+        text-align: start;
+        font-size: 1.25rem;
+        width: 25rem;
+        margin-top: 5rem;
+        z-index: 100;
+      }
+      img {
+        width: 25rem;
+        height: 30rem;
+        position: absolute;
+        right: 0;
+        bottom: -15%;
+        z-index: 10;
+      }
+    }
+  }
+
+  #contact {
+    margin-top: 35%;
+    h1 {
+      font-size: 100px;
+      font-family: "DEMO";
+      font-weight: 100;
+    }
+    img {
+      display: flex;
+      margin: auto;
+      cursor: pointer;
+      position: relative;
+      z-index: 10;
+    }
+    footer {
+      font-family: "Euclid";
+      display: flex;
+      justify-content: space-between;
+      margin-top: 5%;
+      h4 {
+        max-width: 25rem;
+        font-size: 20px;
+        font-weight: 400;
+      }
+      div {
+        display: flex;
+        height: fit-content;
+        margin-top: auto;
+        gap: 5rem;
+        > * {
+          font-weight: 400;
+          font-size: 15px;
+        }
+      }
+    }
+  }
+}
