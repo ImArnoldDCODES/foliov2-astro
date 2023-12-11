@@ -7,6 +7,9 @@
     }
     .container {
       nav {
+        .name {
+          margin: unset;
+        }
         .directions {
           display: none;
         }
