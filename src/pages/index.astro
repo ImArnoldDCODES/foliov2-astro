@@ -11,7 +11,9 @@ import "../styles/responsive/style.scss";
   <div class="container">
     <nav>
       <section class="clock">
-        <span id="time"></span> Lagos, <br />ng wat
+        <span id="time">
+          <script is:inline></script>
+        </span> Lagos, <br />ng wat
       </section>
       <section class="name">AD<span>C</span>ODES</section>
       <section class="directions">
@@ -68,9 +70,13 @@ import "../styles/responsive/style.scss";
           <div class="card">
             <img src={data.image} alt={data.name} />
             <div class="hover">
-              <h5>{data.name}</h5>
-              <h5>{data.desc}</h5>
-              <button>view live</button>
+              <div class="text">
+                <h5>{data.name}</h5>
+                <h6>{data.desc}</h6>
+              </div>
+              <button>
+                <a href={data.link}>view live</a>
+              </button>
             </div>
           </div>
         ))
@@ -114,23 +120,23 @@ import "../styles/responsive/style.scss";
     </footer>
   </div>
 </div>
-<!-- 
+
 <script>
   function UpdateTime() {
     let time = document.getElementById("time");
     const now = new Date();
 
     const options = {
-      hour: "2-digit",
-      minute: "2-digit",
-      timeZone: "Africa/Lagos",
+      hour: "2-digit" as string,
+      minute: "2-digit" as string,
+      timeZone: "Africa/Lagos" as string,
     };
 
-    const currentTime = now.toLocaleTimeString([], options);
+    const currentTime = now.toLocaleTimeString([], options as object);
 
     time.innerHTML = currentTime;
     time.innerHTML = currentTime.replace("AM", "(AM)").replace("PM", "(PM)");
-
-    console.log(time.innerHTML);
   }
-</script> -->
+
+  setInterval(UpdateTime, 1000);
+</script>

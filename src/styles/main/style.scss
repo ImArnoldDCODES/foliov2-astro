@@ -5,11 +5,15 @@
   word-wrap: break-word;
   margin: 0;
   padding: 0;
-  background: #eeead8;
   ::-webkit-scrollbar {
     display: none;
   }
 }
+body,
+html {
+  background: #eeead8;
+}
+
 @font-face {
   font-family: "Euclid";
   src: url("/fonts/euclid/Euclid-Circular-A-Regular.ttf");
@@ -73,7 +77,6 @@
         }
       }
       .directions {
-        border: 2px solid red;
         font-family: "Euclid";
         border: 1px solid rgba(0, 0, 0, 0.3);
         border-radius: 50px;
@@ -187,19 +190,69 @@
         background: none;
       }
       .card {
-        // width: fit-content;
         position: relative;
+        cursor: pointer;
         img {
           position: relative;
           z-index: 10;
           background: none;
         }
         .hover {
+          opacity: 0;
           position: absolute;
           z-index: 12;
-          left: 15%;
+          left: 35%;
           top: 40%;
           width: fit-content;
+          & .text,
+          button {
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            font-family: "Euclid";
+          }
+          .text {
+            border-top-left-radius: 25px;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            padding: 3%;
+            width: 23rem;
+            h5 {
+              text-transform: uppercase;
+              font-weight: 500;
+              font-size: 20px;
+            }
+            h6 {
+              font-size: 16px;
+              font-weight: normal;
+            }
+          }
+          button {
+            padding: 2% 3%;
+            border-radius: 25px;
+            font-weight: normal;
+            font-size: 18px;
+            margin-top: 5%;
+            margin-left: 3%;
+            cursor: pointer;
+            a {
+              text-decoration: none;
+            }
+          }
+        }
+      }
+      .card:hover > .hover {
+        animation: hover ease-in 0.3s;
+        -webkit-animation-fill-mode: forwards;
+      }
+      @keyframes hover {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
         }
       }
     }
@@ -240,7 +293,7 @@
         height: 30rem;
         position: absolute;
         right: 0;
-        bottom: -15%;
+        bottom: -40%;
         z-index: 10;
       }
     }
