@@ -1,17 +1,20 @@
 [
     {
         "name": "Kabiyesi",
-        "image": "/images/card1.png",
-        "desc": "Audiovisual experience about kingship and royalty from the Yoruba land in Nigeria"
+        "image": "/public/images/card1.png",
+        "desc": "Audiovisual experience about kingship and royalty from the Yoruba land in Nigeria",
+        "link": "https://kabiyesi.brimble.app/"
     },
     {
-        "name": "Kabiyesi",
-        "image": "/images/card1.png",
-        "desc": "Audiovisual experience about kingship and royalty from the Yoruba land in Nigeria"
+        "name": "EduConsult",
+        "image": "/public/images/edu.png",
+        "desc": "Education platform for students writing external examinations",
+        "link": "https://www.educonsultsng.org/"
     },
     {
-        "name": "Kabiyesi",
-        "image": "/images/card1.png",
-        "desc": "Audiovisual experience about kingship and royalty from the Yoruba land in Nigeria"
+        "name": "Link Me",
+        "image": "/public/images/linkme.png",
+        "desc": "Chrome Extenstion for quick access to social media web apps",
+        "link": "https://chromewebstore.google.com/detail/linkme/jaboelgfglcempiihgldadmcclnaakao?hl=en-US"
     }
 ]

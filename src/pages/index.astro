@@ -8,6 +8,15 @@ import "../styles/responsive/style.scss";
 <Layout title="Hello, I'm Arnold Daniels" />
 <div id="app">
   <img id="lines" src="/images/lines.png" alt="lines" />
+  <div class="bottom-nav">
+    <div class="popup">
+      <ul>
+        <li><a href="#about" target="">about</a></li>
+        <li><a href="#projects" target="">projects</a></li>
+        <li><a href="#contact" target="">contact</a></li>
+      </ul>
+    </div>
+  </div>
   <div class="container">
     <nav>
       <section class="clock">
@@ -105,7 +114,9 @@ import "../styles/responsive/style.scss";
        work!
     </h1>
 
-    <img src="/images/contact.png" alt="open to work" />
+    <a href="mailto:danielsarnold010@gmail.com">
+      <img src="/images/contact.png" alt="open to work" />
+    </a>
 
     <footer>
       <h4>
@@ -123,7 +134,7 @@ import "../styles/responsive/style.scss";
 
 <script>
   function UpdateTime() {
-    let time = document.getElementById("time");
+    let time: HTMLElement | null = document.getElementById("time");
     const now = new Date();
 
     const options = {
@@ -137,6 +148,34 @@ import "../styles/responsive/style.scss";
     time.innerHTML = currentTime;
     time.innerHTML = currentTime.replace("AM", "(AM)").replace("PM", "(PM)");
   }
-
   setInterval(UpdateTime, 1000);
+
+  
+
+  const botttomNav: HTMLElement | null = document.querySelector(".bottom-nav");
+  const popup: HTMLElement | null = document.querySelector(".popup");
+
+  if (botttomNav && popup) {
+    botttomNav.addEventListener("click", function () {
+      if (popup) {
+        popup.classList.toggle("popup");
+        popup.classList.toggle("popup-open");
+      }
+      if (botttomNav) {
+        botttomNav.classList.toggle("bottom-nav");
+        botttomNav.classList.toggle("bottom-nav-open");
+      }
+    });
+
+    document.addEventListener("click", function (event) {
+      if (
+        popup &&
+        !popup.contains(event.target as Node) &&
+        event.target !== botttomNav
+      ) {
+        popup.classList.remove("popup-open");
+        popup.classList.add("popup");
+      }
+    });
+  }
 </script>
