@@ -3,11 +3,18 @@ import Layout from "../layouts/Layout.astro";
 import projects from "../data/projects.json";
 import "../styles/main/style.scss";
 import "../styles/responsive/style.scss";
+
+interface Project {
+  name: string;
+  image: string;
+  desc: string;
+  link: string;
+}
 ---
 
 <Layout title="Hello, I'm Arnold Daniels" />
 <div id="app">
-  <img id="lines" src="/images/lines.png" alt="lines" />
+  <img id="lines" src="/images/lines.AVIF" alt="lines" />
   <div class="bottom-nav">
     <div class="popup">
       <ul>
@@ -49,7 +56,7 @@ import "../styles/responsive/style.scss";
       <div class="frontend">
         <img
           class="g-back"
-          src="/images/green-background.png"
+          src="/images/green-background.AVIF"
           alt="green-background"
         />
         <div class="f-text">
@@ -57,7 +64,7 @@ import "../styles/responsive/style.scss";
             Frontend <br />
              Engineer
           </h2>
-          <img class="screw" src="/images/screw.png" alt="screw" />
+          <img class="screw" src="/images/screw.AVIF" alt="screw" />
         </div>
       </div>
     </footer>
@@ -75,20 +82,22 @@ import "../styles/responsive/style.scss";
     </h3>
     <section class="cards">
       {
-        projects.map((data) => (
-          <div class="card">
-            <img src={data.image} alt={data.name} />
-            <div class="hover">
-              <div class="text">
-                <h5>{data.name}</h5>
-                <h6>{data.desc}</h6>
+        (projects as Project[]).map((data) => {
+          return (
+            <div class="card">
+              <img src={data.image} alt={data.name} />
+              <div class="hover">
+                <div class="text">
+                  <h5>{data.name}</h5>
+                  <h6>{data.desc}</h6>
+                </div>
+                <button>
+                  <a href={data.link}>view live</a>
+                </button>
               </div>
-              <button>
-                <a href={data.link}>view live</a>
-              </button>
             </div>
-          </div>
-        ))
+          );
+        })
       }
     </section>
     <div class="contents" id="about">
@@ -104,7 +113,7 @@ import "../styles/responsive/style.scss";
         I work with a variety of tools and technologies to build interfaces that
         are both functional and visually appealing.
       </h5>
-      <img src="/images/AD.jpeg" alt="Profile Picture" />
+      <img src="/images/AD.AVIF" alt="Profile Picture" />
     </div>
   </div>
 
@@ -115,7 +124,7 @@ import "../styles/responsive/style.scss";
     </h1>
 
     <a href="mailto:danielsarnold010@gmail.com">
-      <img src="/images/contact.png" alt="open to work" />
+      <img src="/images/contact.AVIF" alt="open to work" />
     </a>
 
     <footer>
@@ -136,25 +145,18 @@ import "../styles/responsive/style.scss";
   function UpdateTime() {
     let time: HTMLElement | null = document.getElementById("time");
     const now = new Date();
-
     const options = {
       hour: "2-digit" as string,
       minute: "2-digit" as string,
       timeZone: "Africa/Lagos" as string,
     };
-
     const currentTime = now.toLocaleTimeString([], options as object);
-
     time.innerHTML = currentTime;
     time.innerHTML = currentTime.replace("AM", "(AM)").replace("PM", "(PM)");
   }
   setInterval(UpdateTime, 1000);
-
-  
-
   const botttomNav: HTMLElement | null = document.querySelector(".bottom-nav");
   const popup: HTMLElement | null = document.querySelector(".popup");
-
   if (botttomNav && popup) {
     botttomNav.addEventListener("click", function () {
       if (popup) {
@@ -162,11 +164,10 @@ import "../styles/responsive/style.scss";
         popup.classList.toggle("popup-open");
       }
       if (botttomNav) {
-        botttomNav.classList.toggle("bottom-nav");
         botttomNav.classList.toggle("bottom-nav-open");
+        botttomNav.classList.toggle("bottom-nav");
       }
     });
-
     document.addEventListener("click", function (event) {
       if (
         popup &&

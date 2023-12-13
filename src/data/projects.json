@@ -1,19 +1,19 @@
 [
     {
         "name": "Kabiyesi",
-        "image": "/images/card1.png",
+        "image": "/images/card1.AVIF",
         "desc": "Audiovisual experience about kingship and royalty from the Yoruba land in Nigeria",
         "link": "https://kabiyesi.brimble.app/"
     },
     {
         "name": "EduConsult",
-        "image": "/images/edu.png",
+        "image": "/images/edu.AVIF",
         "desc": "Education platform for students writing external examinations",
         "link": "https://www.educonsultsng.org/"
     },
     {
         "name": "Link Me",
-        "image": "/images/linkme.png",
+        "image": "/images/linkme.AVIF",
         "desc": "Chrome Extenstion for quick access to social media web apps",
         "link": "https://chromewebstore.google.com/detail/linkme/jaboelgfglcempiihgldadmcclnaakao?hl=en-US"
     }
