@@ -9,14 +9,25 @@
       display: block;
       background: black;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-      width: 80%;
-      height: 3rem;
+      width: 30%;
+      height: 1.5rem;
       position: fixed;
-      bottom: -2rem;
-      left: 10%;
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
+      bottom: 1rem;
+      left: 35%;
+      border-radius: 50px;
       z-index: 100;
+      .arrow {
+        display: flex;
+        margin: 6% auto;
+        transform: rotate(180deg);
+        height: 40%;
+      }
+      .arrow-active{
+        transform: rotate(0deg);
+        display: flex;
+        margin: 6% auto;
+        height: 40%;
+      }
       .popup {
         opacity: 0;
       }
@@ -25,13 +36,16 @@
         top: -10rem;
         left: 50%;
         transform: translateX(-50%);
-        width: 20rem;
+        width: 22rem;
         height: 8rem;
         background: #eeead8;
         box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.6);
+        border-radius: 25px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
         backdrop-filter: blur(9px);
         -webkit-backdrop-filter: blur(9px);
-        font-family: "Euclid";
+        font-family: "DEMO";
+        font-weight: 100;
         ul {
           display: flex;
           flex-direction: column;
@@ -40,10 +54,18 @@
           li {
             list-style: none;
             text-align: center;
+            ::after {
+              content: "";
+              height: 2px;
+              width: 100%;
+              background: #000;
+              color: #000;
+            }
             a {
               color: black;
               text-decoration: none;
               text-transform: uppercase;
+              line-height: 25.06px;
             }
           }
         }
@@ -90,7 +112,7 @@
         }
         .frontend {
           .f-text {
-            & .frontend_engineer {
+            .frontend_engineer {
               font-size: 6rem;
             }
           }
@@ -105,7 +127,19 @@
       section {
         display: flex;
         flex-direction: column;
+        margin-bottom: 5rem;
+        gap: 3rem;
         .card {
+          img{
+            width: 100%;
+            height: 15rem;
+            transform: rotate(5deg);
+          }
+          &:not(:nth-child(1)) img{
+            width: 100%;
+            height: 15rem;
+            transform: rotate(0);
+          }
           &:nth-child(even) {
             float: none;
           }
@@ -116,6 +150,7 @@
             display: block;
             position: relative;
             top: 50%;
+            width: 100%;
             & .text,
             button {
               background: rgba(255, 255, 255, 0.65);
@@ -124,14 +159,14 @@
               -webkit-backdrop-filter: blur(9px);
               border: 1px solid rgba(0, 0, 0, 0.3);
               font-family: "Euclid";
-              margin-top: 3rem;
+              margin-top: 1rem;
             }
             .text {
               border-top-left-radius: 25px;
               border-bottom-left-radius: 25px;
               border-bottom-right-radius: 25px;
               padding: 3%;
-              width: 50%;
+              width: 100%;
               h5 {
                 text-transform: uppercase;
                 font-weight: 500;
@@ -197,6 +232,7 @@
           .f-text {
             & .screw {
               right: 1rem;
+              top: 2rem;
             }
             & .frontend_engineer {
               font-size: 4.5rem;
@@ -207,6 +243,7 @@
       }
     }
     #projects {
+      margin-top: 1rem;
       h1 {
         font-size: 1.4rem;
       }

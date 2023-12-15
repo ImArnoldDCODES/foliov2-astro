@@ -16,10 +16,13 @@ interface Project {
 <div id="app">
   <img id="lines" src="/images/lines.AVIF" alt="lines" />
   <div class="bottom-nav">
+    <img src="/public/images/arrow.png" alt="Arrow" class="arrow" />
     <div class="popup">
       <ul>
         <li><a href="#about" target="">about</a></li>
+        <img src="/public/images/hor-line.png" alt="horizontal-lines" />
         <li><a href="#projects" target="">projects</a></li>
+        <img src="/public/images/hor-line.png" alt="horizontal-lines" />
         <li><a href="#contact" target="">contact</a></li>
       </ul>
     </div>
@@ -99,10 +102,10 @@ interface Project {
                 <div class="text">
                   <h5>{data.name}</h5>
                   <h6>{data.desc}</h6>
-                  </div>
-                  <button>
-                    <a href={data.link}>view live</a>
-                  </button>
+                </div>
+                <button>
+                  <a href={data.link}>view live</a>
+                </button>
               </div>
             </div>
           );
@@ -166,6 +169,7 @@ interface Project {
   setInterval(UpdateTime, 1000);
   const botttomNav: HTMLElement | null = document.querySelector(".bottom-nav");
   const popup: HTMLElement | null = document.querySelector(".popup");
+  const arrow: HTMLElement | null = document.querySelector(".arrow");
   if (botttomNav && popup) {
     botttomNav.addEventListener("click", function () {
       if (popup) {
@@ -176,15 +180,22 @@ interface Project {
         botttomNav.classList.toggle("bottom-nav-open");
         botttomNav.classList.toggle("bottom-nav");
       }
+      if (arrow) {
+        arrow.classList.toggle("arrow");
+        arrow.classList.toggle("arrow-active");
+      }
     });
     document.addEventListener("click", function (event) {
       if (
         popup &&
         !popup.contains(event.target as Node) &&
-        event.target !== botttomNav
+        event.target !== botttomNav &&
+        arrow
       ) {
         popup.classList.remove("popup-open");
         popup.classList.add("popup");
+        arrow.classList.remove("arrow-active");
+        arrow.classList.add("arrow");
       }
     });
   }
