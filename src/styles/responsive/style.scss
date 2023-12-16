@@ -10,7 +10,7 @@
       background: black;
       box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
       width: 30%;
-      height: 1.5rem;
+      height: 2rem;
       position: fixed;
       bottom: 1rem;
       left: 35%;
@@ -18,14 +18,14 @@
       z-index: 100;
       .arrow {
         display: flex;
-        margin: 6% auto;
+        margin: 4% auto;
         transform: rotate(180deg);
         height: 40%;
       }
-      .arrow-active{
+      .arrow-active {
         transform: rotate(0deg);
         display: flex;
-        margin: 6% auto;
+        margin: 4% auto;
         height: 40%;
       }
       .popup {
@@ -130,12 +130,12 @@
         margin-bottom: 5rem;
         gap: 3rem;
         .card {
-          img{
+          img {
             width: 100%;
-            height: 15rem;
+            // height: 15rem;
             transform: rotate(5deg);
           }
-          &:not(:nth-child(1)) img{
+          &:not(:nth-child(1)) img {
             width: 100%;
             height: 15rem;
             transform: rotate(0);
@@ -212,10 +212,78 @@
 }
 @media screen and (max-width: 700px) {
   #app {
+    // .bottom-nav,
+    // .bottom-nav-open {
+    //   .popup-open {
+    //     width: 10rem;
+    //   }
+    // }
     .bottom-nav,
     .bottom-nav-open {
+      display: block;
+      background: black;
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      width: 30%;
+      height: 1.5rem;
+      position: fixed;
+      bottom: 1rem;
+      left: 35%;
+      border-radius: 50px;
+      z-index: 100;
+      .arrow {
+        display: flex;
+        margin: 6% auto;
+        transform: rotate(180deg);
+        height: 40%;
+      }
+      .arrow-active {
+        transform: rotate(0deg);
+        display: flex;
+        margin: 6% auto;
+        height: 40%;
+      }
+
+      .popup {
+        opacity: 0;
+      }
       .popup-open {
-        width: 10rem;
+        position: absolute;
+        top: -10rem;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 12rem;
+        height: 8rem;
+        background: #eeead8;
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.6);
+        border-radius: 25px;
+        border: 1px solid rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(9px);
+        -webkit-backdrop-filter: blur(9px);
+        font-family: "DEMO";
+        font-weight: 100;
+        ul {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+          height: 100%;
+          li {
+            list-style: none;
+            text-align: center;
+            ::after {
+              content: "";
+              height: 2px;
+              width: 100%;
+              background: #000;
+              color: #000;
+            }
+            a {
+              color: black;
+              text-decoration: none;
+              text-transform: uppercase;
+              line-height: 25.06px;
+            }
+          }
+        }
       }
     }
     .container {
