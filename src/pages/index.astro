@@ -4,7 +4,7 @@ import projects from "../data/projects.json";
 import "../styles/main/style.scss";
 import "../styles/responsive/style.scss";
 
-interface Project {
+interface Data {
   name: string;
   image: string;
   desc: string;
@@ -85,7 +85,7 @@ interface Project {
     </h3>
     <section class="cards">
       {
-        (projects as Project[]).map((data) => {
+        (projects as Data[]).map((data) => {
           return (
             <div class="card">
               <img src={data.image} alt={data.name} />
@@ -95,7 +95,7 @@ interface Project {
                   <h6>{data.desc}</h6>
                 </div>
                 <button>
-                  <a href={data.link}>view live</a>
+                  <a href={data.link} target="_">view live</a>
                 </button>
               </div>
               <div class="hover-small">

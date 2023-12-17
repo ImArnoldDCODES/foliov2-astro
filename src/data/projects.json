@@ -1,7 +1,7 @@
 [
     {
         "name": "Kabiyesi",
-        "image": "/images/card1.AVIF",
+        "image": "/public/images/kabiyesi.AVIF",
         "desc": "Audiovisual experience about kingship and royalty from the Yoruba land in Nigeria",
         "link": "https://kabiyesi.brimble.app/"
     },

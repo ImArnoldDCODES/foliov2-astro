@@ -13,6 +13,7 @@ body,
 html {
   background: #eeead8;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 @font-face {
   font-family: "Euclid";
@@ -121,7 +122,7 @@ html {
         font-family: "Euclid";
         font-size: 20px;
         line-height: 25.36px;
-        flex-basis: 40%;
+        flex-basis: 35%;
         height: fit-content;
         margin-top: 3%;
       }
@@ -142,7 +143,7 @@ html {
             background: none;
           }
           .frontend_engineer {
-            transform: translate(0%, -50%);
+            transform: translate(0%, -48%);
             color: black;
             background: none;
             text-align: center;
@@ -341,13 +342,13 @@ html {
         40% {
           transform: translate(-5%, 0%);
         }
-        50%{
+        50% {
           transform: translate(5%, 0%);
         }
         60% {
           transform: translate(-5%, 0%);
         }
-        70%{
+        70% {
           transform: translate(5%, 0%);
         }
       }
