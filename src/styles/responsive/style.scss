@@ -205,6 +205,10 @@
         flex-direction: column;
         gap: 3rem;
         margin-bottom: 5%;
+        div {
+          display: flex;
+          justify-content: space-between;
+        }
       }
     }
   }
@@ -333,6 +337,13 @@
       img {
         margin: 10% 0%;
         width: 100%;
+      }
+      footer {
+        div {
+          > * {
+            width: 8rem;
+          }
+        }
       }
     }
   }
