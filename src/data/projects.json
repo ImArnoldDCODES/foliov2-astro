@@ -6,10 +6,10 @@
         "link": "https://kabiyesi.brimble.app/"
     },
     {
-        "name": "EduConsult",
-        "image": "/images/edu.AVIF",
-        "desc": "Education platform for students writing external examinations",
-        "link": "https://www.educonsultsng.org/"
+        "name": "WA",
+        "image": "/images/wa.AVIF",
+        "desc": "A (Desktop) landing page built with gsap animation library",
+        "link": "https://wa-art.vercel.app/"
     },
     {
         "name": "Link Me",
