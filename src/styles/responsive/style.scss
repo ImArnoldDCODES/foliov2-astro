@@ -20,18 +20,21 @@
         margin: 4% auto;
         transform: rotate(180deg);
         height: 40%;
+        z-index: 1;
       }
       .arrow-active {
         transform: rotate(0deg);
         display: flex;
         margin: 4% auto;
         height: 40%;
+        z-index: 1;
       }
       .popup {
         opacity: 0;
       }
       .popup-open {
         position: absolute;
+        opacity: 1;
         top: -10rem;
         left: 50%;
         transform: translateX(-50%);

@@ -178,25 +178,12 @@ interface Data {
         popup.classList.toggle("popup-open");
       }
       if (botttomNav) {
-        botttomNav.classList.toggle("bottom-nav-open");
         botttomNav.classList.toggle("bottom-nav");
+        botttomNav.classList.toggle("bottom-nav-open");
       }
       if (arrow) {
         arrow.classList.toggle("arrow");
         arrow.classList.toggle("arrow-active");
-      }
-    });
-    document.addEventListener("click", function (event) {
-      if (
-        popup &&
-        !popup.contains(event.target as Node) &&
-        event.target !== botttomNav &&
-        arrow
-      ) {
-        popup.classList.remove("popup-open");
-        popup.classList.add("popup");
-        arrow.classList.remove("arrow-active");
-        arrow.classList.add("arrow");
       }
     });
   }
