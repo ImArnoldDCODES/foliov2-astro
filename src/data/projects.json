@@ -6,15 +6,15 @@
         "link": "https://kabiyesi.brimble.app/"
     },
     {
-        "name": "WA",
-        "image": "/images/wa.AVIF",
-        "desc": "A (Desktop) landing page built with gsap animation library",
-        "link": "https://wa-art.vercel.app/"
+        "name": "Adedeji Rotibi's Portfolio",
+        "image": "/images/adedeji.AVIF",
+        "desc": "Im Adedeji Rotibi, a backend and mobile developer",
+        "link": "https://adedejirotibi.com/"
     },
     {
-        "name": "Link Me",
-        "image": "/images/linkme.AVIF",
-        "desc": "Chrome Extenstion for quick access to social media web apps",
-        "link": "https://chromewebstore.google.com/detail/linkme/jaboelgfglcempiihgldadmcclnaakao?hl=en-US"
+        "name": "Spin-The-Wheel",
+        "image": "/images/wheel.AVIF",
+        "desc": "Currently working on a fullstack spin-wheel giveaway platfrom",
+        "link": "https://spin-wheel-frontend.brimble.app/"
     }
 ]
